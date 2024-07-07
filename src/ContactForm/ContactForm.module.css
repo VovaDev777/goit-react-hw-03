@@ -6,10 +6,4 @@
     width: 100px;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-}
-.submitBtn {
-    width: 100px;
-}
+
