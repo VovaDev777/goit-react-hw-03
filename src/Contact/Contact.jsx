@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { AiOutlineUser, AiFillPhone } from "react-icons/ai";
 
 const Contact = ({username, number}) => {

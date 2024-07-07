@@ -1,18 +1,20 @@
 import { Formik, Form, Field } from 'formik';
 import css from "./ContactForm.module.css"
 
-const ContactFrom = ({onAddContact}) => {
-    const handleSubmit = (values) => {
-        console.log(values);
+const ContactFrom = ({ onAddContact }) => {
+
+
+    const handleSubmit = (values, {resetForm}) => {
         onAddContact(values);
+        resetForm();
     }
 
   return (
     <>
     <Formik
         initialValues={{
-            username: "Bob",
-            number: "380",
+            username: "",
+            number: "",
 
         }}
         onSubmit={handleSubmit}
@@ -24,7 +26,7 @@ const ContactFrom = ({onAddContact}) => {
             </div>
             <div>
                 <label>Number</label>
-                <Field type="number" name="number"/>
+                <Field type="text" name="number"/>
             </div>
             <button className={css.submitBtn} type='submit'>Add contact</button>
         </Form>
