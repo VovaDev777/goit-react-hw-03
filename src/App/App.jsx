@@ -1,6 +1,5 @@
 import ContactForm from "../ContactForm/ContactForm"
 import { useState } from "react"
-// import Contact from "../Contact/Contact";
 import SearchBox from '../SearchBox/SearchBox'
 import 'normalize.css';
 import ContactList from "../ContactList/ContactList";
