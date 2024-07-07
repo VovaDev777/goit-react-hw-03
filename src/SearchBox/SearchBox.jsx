@@ -3,7 +3,8 @@ import React from 'react'
 const SearchBox = () => {
   return (
     <form>
-        <label></label>
+        <label>Find contacts by name</label>
+        
     </form>
   )
 }
