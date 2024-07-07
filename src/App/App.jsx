@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div className={css.container}>
-      <h1>Phonebook</h1>
+      <h1 className={css.text}>Phonebook</h1>
       <ContactForm onAddContact = {handleAddContact}/>
       <SearchBox/>
       <ContactList userinfo = {contacts} onDeleteContact = {handleDeleteContact}/>

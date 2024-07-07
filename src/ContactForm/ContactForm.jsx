@@ -19,7 +19,8 @@ const ContactFrom = ({ onAddContact }) => {
         }}
         onSubmit={handleSubmit}
     >
-        <Form >
+        <Form>
+            <div className={css.form}>
             <div className={css.formList}>
                 <div className={css.formItem}>
                     <label className={css.label}>Name</label>
@@ -31,6 +32,7 @@ const ContactFrom = ({ onAddContact }) => {
                 </div>
             </div>
             <button className={css.submitBtn} type="submit">Add contact</button>
+            </div>
         </Form>
 
     </Formik>
