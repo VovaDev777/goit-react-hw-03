@@ -10,12 +10,12 @@ const Contact = ({username, number, onDelete}) => {
     <div className={css.container}>
         <ul className={css.list}>
             <li className={css.listItem}>
-                <AiOutlineUser />
-                <p>{username}</p>
+                <AiOutlineUser className={css.svgIcon}/>
+                <p className={css.text}>{username}</p>
             </li>
             <li className={css.listItem}>
-                <AiFillPhone />
-                <p>{number}</p>
+                <AiFillPhone className={css.svgIcon}/>
+                <p className={css.text}>{number}</p>
             </li>
         </ul>
         <button type='submit' onClick={onDelete} className={css.btn}>Delete</button>
