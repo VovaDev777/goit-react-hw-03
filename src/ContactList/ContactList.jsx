@@ -1,8 +1,12 @@
-import React from 'react'
+import Contact from '../Contact/Contact'
 
-const ContactList = () => {
+const ContactList = ({userinfo, onDeleteContact}) => {
   return (
-    <div>ContactList</div>
+    <>
+        {userinfo.map(({username, number}, index) => (
+        <Contact key = {index} username = {username} number = {number} onDelete={() => onDeleteContact(index)}/>
+      ))}
+    </>
   )
 }
 

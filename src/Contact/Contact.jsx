@@ -1,7 +1,8 @@
 
 import { AiOutlineUser, AiFillPhone } from "react-icons/ai";
 
-const Contact = ({username, number}) => {
+const Contact = ({username, number, onDelete}) => {
+  
   return (
     <div>
         <ul>
@@ -14,7 +15,7 @@ const Contact = ({username, number}) => {
                 <p>{number}</p>
             </li>
         </ul>
-        <button type='submit'>Delete</button>
+        <button type='submit' onClick={onDelete}>Delete</button>
     </div>
   )
 }
