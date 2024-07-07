@@ -20,12 +20,12 @@ const ContactFrom = ({ onAddContact }) => {
         onSubmit={handleSubmit}
     >
         <Form className={css.form}>
-            <ul className={css.fromList}>
-                <li className={css.fromItem}>
+            <ul className={css.formList}>
+                <li className={css.formItem}>
                     <label className={css.label}>Name</label>
                     <Field type="text" name="username" className={css.input}/>
                 </li>
-                <li className={css.fromItem}>
+                <li className={css.formItem}>
                     <label className={css.label}>Number</label>
                     <Field type="text" name="number" className={css.input}/>
                 </li>
