@@ -20,15 +20,18 @@ const ContactFrom = ({ onAddContact }) => {
         onSubmit={handleSubmit}
     >
         <Form className={css.form}>
-            <div>
-                <label>Name</label>
-                <Field type="text" name="username"/>
-            </div>
-            <div>
-                <label>Number</label>
-                <Field type="text" name="number"/>
-            </div>
+            <ul className={css.fromList}>
+                <li className={css.fromItem}>
+                    <label className={css.label}>Name</label>
+                    <Field type="text" name="username" className={css.input}/>
+                </li>
+                <li className={css.fromItem}>
+                    <label className={css.label}>Number</label>
+                    <Field type="text" name="number" className={css.input}/>
+                </li>
+            </ul>
             <button className={css.submitBtn} type='submit'>Add contact</button>
+            
         </Form>
     </Formik>
     </>
