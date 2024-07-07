@@ -1,9 +1,10 @@
 import { Formik, Form, Field } from 'formik';
 import css from "./ContactForm.module.css"
 
-const ContactFrom = () => {
+const ContactFrom = ({onAddContact}) => {
     const handleSubmit = (values) => {
         console.log(values);
+        onAddContact(values);
     }
 
   return (
