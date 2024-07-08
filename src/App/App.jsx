@@ -6,6 +6,7 @@ import css from './App.module.css'
 
 const App = () => {
   const [contacts, setContact] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleAddContact = (contact) => {
     setContact([...contacts, contact])
