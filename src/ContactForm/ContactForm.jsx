@@ -1,9 +1,9 @@
 import { Formik, Form, Field } from 'formik';
 import css from "./ContactForm.module.css";
-import * as Yup from 'yup';
+import * as Yup from "yup";
 
 
-const userSchema = Yup.object().shape({
+const UserSchema = Yup.object().shape({
     username: Yup.string()
      .min(3, 'Your name is too Short!')
      .max(50, 'Your name is too Long!')
@@ -32,7 +32,7 @@ const ContactFrom = ({ onAddContact }) => {
             number: "",
         }}
         onSubmit={handleSubmit}
-        validationSchema={userSchema}
+        validationSchema={UserSchema}
     >
         <Form>
             <div className={css.form}>
