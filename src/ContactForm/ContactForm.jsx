@@ -4,7 +4,14 @@ import * as Yup from 'yup';
 
 
 const userSchema = Yup.object().shape({
-    
+    username: Yup.string()
+     .min(3, 'Your name is too Short!')
+     .max(50, 'Your name is too Long!')
+     .required('This field is required'),
+    number: Yup.number()
+     .min(2, 'Your number is too Short!')
+     .max(25, 'Your number is too Long!')
+     .required('This field is required'),
 });
 
 
@@ -23,9 +30,9 @@ const ContactFrom = ({ onAddContact }) => {
         initialValues={{
             username: "",
             number: "",
-
         }}
         onSubmit={handleSubmit}
+        validationSchema={userSchema}
     >
         <Form>
             <div className={css.form}>
