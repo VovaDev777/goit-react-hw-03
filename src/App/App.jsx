@@ -14,12 +14,18 @@ const App = () => {
   const handleDeleteContact = (index) => {
     setContact(contacts.filter((_, i) => i !== index));
   };
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  const filteredContacts = contacts.filter(contact =>
+    contact.username.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className={css.container}>
       <h1 className={css.text}>Phonebook</h1>
       <ContactForm onAddContact = {handleAddContact}/>
-      <SearchBox/>
+      <SearchBox />
       <ContactList userinfo = {contacts} onDeleteContact = {handleDeleteContact}/>
       
     </div>
