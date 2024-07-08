@@ -8,19 +8,30 @@ const App = () => {
   const [contacts, setContact] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
+
+  useEffect(() => {
+    const storedContacts = JSON.parse(localStorage.getItem("contacts"));
+    if (storedContacts) {
+      setContact(storedContacts);
+    }
+  }, []);
+
   useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts))
    }, [contacts])
 
   const handleAddContact = (contact) => {
     setContact([...contacts, contact])
-  }
+  };
+
   const handleDeleteContact = (index) => {
     setContact(contacts.filter((_, i) => i !== index));
   };
+
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
+
   const filteredContacts = contacts.filter(contact =>
     contact.username.toLowerCase().includes(searchQuery.toLowerCase())
   );
