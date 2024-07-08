@@ -1,5 +1,13 @@
 import { Formik, Form, Field } from 'formik';
-import css from "./ContactForm.module.css"
+import css from "./ContactForm.module.css";
+import * as Yup from 'yup';
+
+
+const userSchema = Yup.object().shape({
+    
+});
+
+
 
 const ContactFrom = ({ onAddContact }) => {
 
