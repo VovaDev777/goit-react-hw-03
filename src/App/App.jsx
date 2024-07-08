@@ -25,8 +25,8 @@ const App = () => {
     <div className={css.container}>
       <h1 className={css.text}>Phonebook</h1>
       <ContactForm onAddContact = {handleAddContact}/>
-      <SearchBox />
-      <ContactList userinfo = {contacts} onDeleteContact = {handleDeleteContact}/>
+      <SearchBox searchQuery={searchQuery} onSearchChange={handleSearchChange}/>
+      <ContactList userinfo = {filteredContacts} onDeleteContact = {handleDeleteContact}/>
       
     </div>
   )
