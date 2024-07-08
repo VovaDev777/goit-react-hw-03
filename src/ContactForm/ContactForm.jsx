@@ -32,7 +32,7 @@ const ContactFrom = ({ onAddContact }) => {
             number: "",
         }}
         onSubmit={handleSubmit}
-        validationSchema={UserSchema}
+        // validationSchema={UserSchema}
     >
         <Form>
             <div className={css.form}>
