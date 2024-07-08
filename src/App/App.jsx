@@ -1,5 +1,5 @@
 import ContactForm from "../ContactForm/ContactForm"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import SearchBox from '../SearchBox/SearchBox'
 import ContactList from "../ContactList/ContactList";
 import css from './App.module.css'
@@ -7,6 +7,10 @@ import css from './App.module.css'
 const App = () => {
   const [contacts, setContact] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts))
+   }, [contacts])
 
   const handleAddContact = (contact) => {
     setContact([...contacts, contact])
