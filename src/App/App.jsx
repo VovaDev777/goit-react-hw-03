@@ -5,16 +5,13 @@ import ContactList from "../ContactList/ContactList";
 import css from './App.module.css'
 
 const App = () => {
-  const [contacts, setContact] = useState([]);
+  const [contacts, setContact] = useState(() => {
+    const storedContacts = JSON.parse(localStorage.getItem("contacts"));
+    return storedContacts ? storedContacts : [];
+  });
   const [searchQuery, setSearchQuery] = useState("");
 
 
-  useEffect(() => {
-    const storedContacts = JSON.parse(localStorage.getItem("contacts"));
-    if (storedContacts) {
-      setContact(storedContacts);
-    }
-  }, []);
   
 
   useEffect(() => {
